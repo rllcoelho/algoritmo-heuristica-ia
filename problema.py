@@ -5,7 +5,7 @@ class OitoRainhas():
     def __init__(self):
         self.rainhas = []
         for linha in range(8):
-            self.rainhas += [int(random.random(0,8))]
+            self.rainhas += [int(random.randrange(1,8))]
         self.adaptacao = None
 
     def calculaAdaptacao(self):
@@ -24,6 +24,6 @@ class OitoRainhas():
             return None
         else:
             for rainha in rainhas:
-                if rainha > 7 or rainha < 0:
+                if rainha > 8 or rainha < 1:
                     return None
         self.rainhas = rainhas
